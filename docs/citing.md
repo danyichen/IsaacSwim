@@ -8,6 +8,7 @@ If IsaacSwim helps your research, please cite it:
   title   = {{IsaacSwim}: Underwater Robotics for {NVIDIA} {Isaac} {Sim}},
   year    = {2026},
   version = {0.1.1},
+  doi     = {10.5281/zenodo.24375186},
   url     = {https://github.com/danyichen/IsaacSwim}
 }
 ```

@@ -6,6 +6,7 @@ ROVs, AUVs, underwater manipulation, and swimming robots to run in the Isaac eco
 underwater cameras, sonar and waves.
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24375186.svg)](https://doi.org/10.5281/zenodo.24375186)
 
 https://github.com/user-attachments/assets/7d49cbf6-5a34-47af-9ca0-91c8da5710de
 
