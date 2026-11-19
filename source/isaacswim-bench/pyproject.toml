@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "isaacswim-bench"
-version = "0.1.0"
+version = "0.1.1"
 description = "Build underwater robot tasks and scenes on IsaacSwim: scripted experts, evaluation and demonstrations"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,7 +21,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Physics",
 ]
-dependencies = ["isaacswim==0.1.0", "numpy>=1.23", "torch>=2.0"]
+dependencies = ["isaacswim==0.1.1", "numpy>=1.23", "torch>=2.0"]
 
 [project.optional-dependencies]
 data = ["h5py>=3.0"]

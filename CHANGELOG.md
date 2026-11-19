@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Fixed parallel environments failing to close on Isaac Lab 3.
+- Fixed the RSL-RL demo on Isaac Lab 3, which uses RSL-RL 5.
+- Releases are published to PyPI from GitHub Actions.
+
 ## 0.1.0
 
 Initial research beta for Isaac Sim 5.1 and Isaac Lab 2.3 on Linux and Windows,

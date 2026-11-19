@@ -5,7 +5,7 @@ from .kinematic import KinematicEnv
 from .rollout import rollout, summarize
 from .tasks import TASKS, make_task
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = ["__version__", "TASKS", "make_task", "KinematicEnv", "rollout", "summarize", "Task",
            "World", "Command", "SceneSpec", "Prop", "StepResult"]

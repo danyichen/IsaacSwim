@@ -167,6 +167,7 @@ class VectorSimEnv:
         if getattr(self, "_closed", False):
             return
         self.sim.pause()
-        self.sim.clear_all_callbacks()
+        if hasattr(self.sim, "clear_all_callbacks"):
+            self.sim.clear_all_callbacks()
         self.sim.clear_instance()
         self._closed = True

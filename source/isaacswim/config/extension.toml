@@ -1,5 +1,5 @@
 [package]
-version = "0.1.0"
+version = "0.1.1"
 title = "IsaacSwim: underwater dynamics and sensing"
 description = "Underwater robotics for Isaac Sim: hydrodynamics, buoyancy, currents, thrusters, navigation sensors, underwater cameras and OceanSim interop"
 readme = "README.md"

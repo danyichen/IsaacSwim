@@ -50,10 +50,10 @@ env_cfg.log_dir = log_dir
 
 t0 = time.time()
 env = RslRlVecEnvWrapper(gym.make(args.task, cfg=env_cfg), clip_actions=agent_cfg.clip_actions)
-runner = OnPolicyRunner(env, rl_envs.runner_cfg(agent_cfg), log_dir=log_dir,
-                        device=agent_cfg.device)
 dump_yaml(os.path.join(log_dir, "params", "env.yaml"), env_cfg)
 dump_yaml(os.path.join(log_dir, "params", "agent.yaml"), agent_cfg)
+runner = OnPolicyRunner(env, rl_envs.runner_cfg(agent_cfg), log_dir=log_dir,
+                        device=agent_cfg.device)
 t1 = time.time()
 runner.learn(num_learning_iterations=agent_cfg.max_iterations, init_at_random_ep_len=True)
 print(f"setup {t1 - t0:.1f} s, training {time.time() - t1:.1f} s, logs in {log_dir}", flush=True)

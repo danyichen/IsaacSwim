@@ -13,7 +13,7 @@ type: software
 authors:
   - family-names: Chen
     given-names: Danyi
-version: 0.1.0
+version: 0.1.1
 license: Apache-2.0
 repository-code: "https://github.com/danyichen/IsaacSwim"
 keywords:

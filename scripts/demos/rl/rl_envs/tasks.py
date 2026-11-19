@@ -119,6 +119,10 @@ class TaskEnv(DirectRLEnv):
         self._next_seed = self._seed
         return self._seed
 
+    @property
+    def obs_buf(self):
+        return self._get_observations()
+
     def _get_observations(self):
         state = np.concatenate(
             [self._obs[k] for k in ("proprio", "priv_odom", "priv_task")], axis=-1

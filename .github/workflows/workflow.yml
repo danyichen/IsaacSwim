@@ -1,0 +1,27 @@
+name: publish
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install build twine
+      - run: |
+          python -m build source/isaacswim --outdir dist
+          python -m build source/isaacswim-bench --outdir dist
+          twine check --strict dist/*
+          python scripts/tools/check_release.py --wheels dist
+      - uses: pypa/gh-action-pypi-publish@release/v1

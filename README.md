@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/7d49cbf6-5a34-47af-9ca0-91c8da5710de
 
 ## Status
 
-Version 0.1.0 is a research beta for Isaac Sim 5.1 and Isaac Lab 2.3. Isaac Sim 6.2
+Version 0.1.1 is a research beta for Isaac Sim 5.1 and Isaac Lab 2.3. Isaac Sim 6.2
 and Isaac Lab 3.0 are supported as a research preview; see
 [installation](docs/installation.md#isaac-sim-6-and-isaac-lab-3).
 

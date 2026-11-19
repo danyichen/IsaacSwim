@@ -9,7 +9,7 @@ from isaacswim.sensors import IMU, Altimeter, DopplerVelocityLog, Odometry, Pres
 from isaacswim.shapes import DEFAULT_COEF, FluidShape
 from isaacswim.wrench import HydroWrench
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "FluidShape",

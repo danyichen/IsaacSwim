@@ -55,7 +55,7 @@ def main():
     try:
         runner = OnPolicyRunner(env, rl_envs.runner_cfg(agent),
                                 log_dir=None, device=args.device)
-        runner.load(str(args.checkpoint), load_optimizer=False)
+        runner.load(str(args.checkpoint))
         policy = runner.get_inference_policy(device=args.device)
         observations = env.get_observations()
         completed = steps = 0

@@ -7,7 +7,7 @@ If IsaacSwim helps your research, please cite it:
   author  = {Chen, Danyi},
   title   = {{IsaacSwim}: Underwater Robotics for {NVIDIA} {Isaac} {Sim}},
   year    = {2026},
-  version = {0.1.0},
+  version = {0.1.1},
   url     = {https://github.com/danyichen/IsaacSwim}
 }
 ```

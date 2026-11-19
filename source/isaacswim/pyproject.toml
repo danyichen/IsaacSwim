@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "isaacswim"
-version = "0.1.0"
+version = "0.1.1"
 description = "Underwater robotics for NVIDIA Isaac Sim and Isaac Lab: hydrodynamics, buoyancy, currents, thrusters, sensors, an example vehicle"
 readme = "README.md"
 requires-python = ">=3.10"
