@@ -9,7 +9,7 @@ underwater cameras, sonar and waves.
 
 https://github.com/user-attachments/assets/7d49cbf6-5a34-47af-9ca0-91c8da5710de
 
-*What you can build: a demo mission made with IsaacSwim's task and scene APIs, at 8× speed.
+*A demo mission made with IsaacSwim's task and scene APIs, at 8× speed.
 [Watch at normal speed on YouTube](https://youtu.be/3lMIQrnFJFI).*
 
 ## Status
