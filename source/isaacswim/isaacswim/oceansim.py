@@ -59,6 +59,8 @@ def _deprecated_ext_folder() -> str | None:
 
 
 KIT_ARGS = " ".join(f"--enable {e}" for e in KIT_EXTENSIONS)
+# The sonar's annotators make this channel warn on every rendered frame.
+KIT_ARGS += " --/log/channels/isaacsim.core.simulation_manager.plugin=error"
 if _deprecated_ext_folder():
     KIT_ARGS = f"--ext-folder {_deprecated_ext_folder()} {KIT_ARGS}"
 
