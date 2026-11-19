@@ -1,0 +1,85 @@
+IsaacSwim
+Copyright 2026 Danyi Chen
+
+Licensed under the Apache License, Version 2.0.
+
+This product includes a re-implementation of the ellipsoid fluid model from
+MuJoCo (https://github.com/google-deepmind/mujoco), specifically the algorithms
+in src/engine/engine_passive.c (mj_viscousForces, mj_addedMassForces) and the
+compile-time added-mass coefficients of src/user/user_objects.cc.  MuJoCo is
+Copyright DeepMind Technologies Limited and is licensed under the Apache License,
+Version 2.0.  No MuJoCo source code is included in this distribution; the model is
+re-derived and re-implemented in PyTorch, and its agreement with MuJoCo is
+verified numerically in source/isaacswim/test/test_mujoco_parity.py.
+
+The vehicle interface (a robot carrying named actuators and sensors) follows the
+design of Stonefish (https://github.com/patrykcieslak/stonefish, GPL-3.0).  No
+Stonefish source code is included.
+
+isaacswim.oceansim_render copies OceanSim's published water constants
+(https://github.com/umfieldrobotics/OceanSim, BSD-3-Clause, Copyright (c)
+2024-2025 The OceanSim Project Developers) and evaluates its
+underwater image model; OceanSim's kernels and sensors are imported from the
+installed extension, not distributed.
+
+isaacswim.assets downloads, at build time and into a local cache, third-party
+material that is NOT distributed with this product and is NOT covered by its
+licence:
+  * the stock BlueROV2 Heavy description from
+    https://github.com/edxmorgan/uvms-simulator (AGPL-3.0-or-later);
+  * Reach Robotics' Alpha 5 description and meshes from
+    https://github.com/Robotic-Decision-Making-Lab/alpha, under Reach Robotics'
+    license, which the builder keeps verbatim with every generated file;
+  * Robotiq's Isaac Sim 2F-85 asset from https://github.com/robotiq/isaacsim_assets
+    (Robotiq content BSD-3-Clause; portions adapted from NVIDIA Corporation's
+    asset under CC BY 4.0), whose licenses and attribution the builder keeps
+    with the generated files.
+Check those licences before redistributing anything built from them.
+
+Reach Robotics Pty Ltd has authorized the IsaacSwim author, in writing, to use
+the Alpha 5 model in simulation on these conditions, and may revoke that
+authorization: the model is downloaded only from a source that contains Reach's
+license file; neither the original nor the converted files are redistributed;
+Reach's notice and copyright lines are kept with the files; and IsaacSwim is
+simulation only -- the simulated Reach Alpha 5's performance is not
+representative of the real product's performance.
+
+IsaacSwim is not affiliated with, endorsed by, or sponsored by DeepMind
+Technologies Limited, NVIDIA Corporation, Blue Robotics Inc., Reach Robotics
+or Robotiq Inc.  "Isaac Sim", "Isaac Lab" and "PhysX" are trademarks of NVIDIA
+Corporation; "MuJoCo" is a trademark of DeepMind Technologies Limited;
+"BlueROV2" is a trademark of Blue Robotics Inc.  They are used here only to
+identify the software and hardware this package interoperates with.
+
+OceanSim BSD-3-Clause notice for the reproduced water constants and image model:
+
+Copyright (c) 2024-2025, The OceanSim Project Developers.
+
+All rights reserved.
+
+SPDX-License-Identifier: BSD-3-Clause
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software without
+   specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

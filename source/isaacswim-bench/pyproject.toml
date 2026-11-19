@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isaacswim-bench"
+version = "0.1.0"
+description = "Build underwater robot tasks and scenes on IsaacSwim: scripted experts, evaluation and demonstrations"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Danyi Chen" }]
+keywords = ["isaac-sim", "isaaclab", "underwater", "benchmark", "rov", "manipulation", "imitation-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["isaacswim==0.1.0", "numpy>=1.23", "torch>=2.0"]
+
+[project.optional-dependencies]
+data = ["h5py>=3.0"]
+scenery = ["pillow>=9.0", "opencv-python-headless>=4.5"]
+video = ["imageio>=2.20", "imageio-ffmpeg"]
+all = ["isaacswim-bench[data,scenery,video]"]
+
+[project.urls]
+Homepage = "https://github.com/danyichen/IsaacSwim"
+Documentation = "https://danyichen.github.io/IsaacSwim/"
+Issues = "https://github.com/danyichen/IsaacSwim/issues"
+
+[tool.setuptools.packages.find]
+include = ["isaacswim_bench*"]

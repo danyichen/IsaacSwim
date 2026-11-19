@@ -1,0 +1,13 @@
+[package]
+version = "0.1.0"
+title = "IsaacSwim: underwater dynamics and sensing"
+description = "Underwater robotics for Isaac Sim: hydrodynamics, buoyancy, currents, thrusters, navigation sensors, underwater cameras and OceanSim interop"
+readme = "README.md"
+repository = "https://github.com/danyichen/IsaacSwim"
+category = "simulation"
+keywords = ["isaac-sim", "isaaclab", "underwater", "hydrodynamics", "buoyancy", "added-mass", "auv", "rov", "thrusters", "sonar", "oceansim", "mujoco"]
+
+[dependencies]
+
+[[python.module]]
+name = "isaacswim"

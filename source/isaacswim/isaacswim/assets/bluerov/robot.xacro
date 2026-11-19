@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+  A stock BlueROV2 Heavy carrying a Reach Alpha 5, as a free-floating articulation.
+
+  IsaacSwim's own top level.  It includes two macros from the pinned, separately
+  downloaded descriptions (see build_urdf.py) and contains none of their content:
+
+    bluerov2_heavy_urdf  uvms-simulator's stock BlueROV2 Heavy: hull, camera tilt
+                         and eight T200s, the four vectored ones at 45 degrees.
+    alpha_urdf           Reach's Alpha 5 from Robotic-Decision-Making-Lab/alpha.
+
+  The arm hangs below the hull at the pose uvms-simulator uses for its
+  arm-carrying variants: (0.19, 0, -0.12) from base_link, rolled 180 degrees so
+  it reaches forward and down.  There is no world link and nothing is welded to
+  a fixed frame: an ROV has a floating base.
+
+  `$(find isaacswim_vehicle)` is resolved to the staged tree by the builder.
+-->
+<robot name="bluerov2_heavy_alpha" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find isaacswim_vehicle)/blue/xacro/bluerov2_heavy/urdf.xacro"/>
+  <xacro:include filename="$(find isaacswim_vehicle)/alpha/xacro/alpha.urdf.xacro"/>
+
+  <xacro:bluerov2_heavy_urdf prefix=""/>
+
+  <link name="manipulator_mount_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8"/>
+    </inertial>
+  </link>
+
+  <joint name="manipulator_mount_joint" type="fixed">
+    <origin xyz="0.19 0 -0.12" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="manipulator_mount_link"/>
+  </joint>
+
+  <xacro:alpha_urdf parent="manipulator_mount_link" prefix="alpha_"
+                    description_package="alpha_description">
+    <origin xyz="0 0 0" rpy="${pi} 0 0"/>
+  </xacro:alpha_urdf>
+
+</robot>

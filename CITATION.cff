@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use IsaacSwim in your research, please cite it as below."
+title: "IsaacSwim: underwater robotics simulator add-on for Isaac Sim"
+abstract: >-
+  Nvidia Isaac Sim offers a rich ecosystem of robotic simulation and learning features.
+  However, it does not have hydrodynamics, buoyancy, underwater camera effects,
+  and other components required for realistically simulating underwater robots.
+  This project aims to create a feature rich underwater robotics focused add-on for Isaac Sim that enables
+  it to be used for underwater robotics research,
+  including batched reinforcement learning and underwater
+  manipulation and navigation tasks.
+type: software
+authors:
+  - family-names: Chen
+    given-names: Danyi
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/danyichen/IsaacSwim"
+keywords:
+  - isaac-sim
+  - isaaclab
+  - underwater robotics
+  - hydrodynamics
+  - simulation

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isaacswim"
+version = "0.1.0"
+description = "Underwater robotics for NVIDIA Isaac Sim and Isaac Lab: hydrodynamics, buoyancy, currents, thrusters, sensors, an example vehicle"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Danyi Chen" }]
+keywords = ["isaac-sim", "isaaclab", "underwater", "hydrodynamics", "buoyancy", "added-mass", "auv", "rov", "thrusters", "sonar", "oceansim", "mujoco", "manipulation", "imitation-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["numpy>=1.23", "torch>=2.0"]
+
+[project.optional-dependencies]
+mujoco = ["mujoco>=3.14"]
+video = ["imageio>=2.20", "imageio-ffmpeg"]
+warp = ["warp-lang>=1.8"]
+netcdf = ["xarray>=2023.1", "netCDF4>=1.6"]
+cfd = ["scipy>=1.9"]
+build = ["xacro>=2.0", "trimesh>=4.0", "pycollada>=0.7"]
+all = ["isaacswim[mujoco,video,warp,netcdf,cfd,build]"]
+
+[project.urls]
+Homepage = "https://github.com/danyichen/IsaacSwim"
+Documentation = "https://danyichen.github.io/IsaacSwim/"
+Issues = "https://github.com/danyichen/IsaacSwim/issues"
+
+[tool.setuptools.packages.find]
+include = ["isaacswim*"]
+
+[tool.setuptools.package-data]
+"isaacswim.assets.bluerov" = ["*.xacro"]
