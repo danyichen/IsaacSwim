@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% set home_title = config.site_name ~ " - Underwater robotics simulation for Isaac Sim and Isaac Lab" %}
+
+{% block htmltitle %}
+  {% if page.is_homepage %}<title>{{ home_title }}</title>{% else %}{{ super() }}{% endif %}
+{% endblock %}
+
+{% block extrahead %}
+  {% set title = home_title if page.is_homepage else (page.title ~ " - " ~ config.site_name) %}
+  {% set description = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  {% set image = config.site_url ~ "media/course_tour_poster.jpg" %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:image" content="{{ image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ image }}">
+  {% if page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "IsaacSwim",
+    "description": "{{ description }}",
+    "codeRepository": "{{ config.repo_url }}",
+    "url": "{{ config.site_url }}",
+    "programmingLanguage": "Python",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "identifier": "https://doi.org/10.5281/zenodo.24375186",
+    "keywords": "Isaac Sim, Isaac Lab, underwater robotics, underwater simulation, hydrodynamics, ROV, AUV, BlueROV2, sonar"
+  }
+  </script>
+  {% endif %}
+{% endblock %}
