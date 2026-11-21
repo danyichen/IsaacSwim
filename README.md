@@ -34,7 +34,7 @@ simulator rollouts against recorded BlueROV2 Heavy motion. The
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/media/bench_accuracy_dark.svg">
-  <img alt="Native prediction error on the Marinarium BlueROV2 datasets" src="docs/media/bench_accuracy.svg">
+  <img alt="Position, attitude, linear velocity and angular velocity prediction errors 2 s ahead on the Marinarium BlueROV2 datasets" src="docs/media/bench_accuracy.svg">
 </picture>
 
 ## Capabilities
